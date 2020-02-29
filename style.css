@@ -4,3 +4,7 @@
     color: white;
     border-radius: 0;
 }
+.slider{
+    height: 25px;
+    background-color: chartreuse;
+}
