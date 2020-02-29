@@ -8,3 +8,9 @@
     height: 25px;
     background-color: chartreuse;
 }
+.percentage{
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(63, 166, 235);
+    color: white;
+}

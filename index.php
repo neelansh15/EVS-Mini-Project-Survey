@@ -48,8 +48,9 @@
             </div>
 
             <div class="form-group">
-                <label for="percentBio">What is the approximate percentage of Biodegradable waste?</label>
-                <input type="range" name="percentBio" id="percentBio" class="slider form-control-range" min="1" max="100">
+                <label for="percentBio">What is the approximate percentage of Biodegradable/Recyclable waste?</label>
+                <p class="percentage">50</p>
+                <input type="range" name="percentBio" id="percentBio" class="slider form-control-range" min="0" max="100">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -60,5 +61,10 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="bootstrap.min.js"></script>
+    <script>
+        $('input[type=range]').mousemove(function(){
+            $('.percentage').html(this.value)
+        })
+    </script>
 </body>
 </html>
