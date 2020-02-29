@@ -65,6 +65,10 @@
         $('input[type=range]').mousemove(function(){
             $('.percentage').html(this.value)
         })
+        //For Touch Devices
+        $('input[type=range]').click(function(){
+            $('.percentage').html(this.value)
+        })
     </script>
 </body>
 </html>
