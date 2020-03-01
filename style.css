@@ -1,6 +1,7 @@
 .jumbotron{
     /* background-color: rgb(63, 166, 235); */
-    background: linear-gradient(rgb(63, 166, 235) , rgb(33, 147, 223));
+    /* background: linear-gradient(rgb(63, 166, 235) , rgb(33, 147, 223)); */
+    background: linear-gradient(rgb(93, 181, 240) , rgb(5, 132, 216));
     color: white;
     border-radius: 0;
 }
