@@ -30,27 +30,28 @@
 
             <div class="form-row">
                 <div class="form-group col">
-                    <label for="dustbin_num">No. of dustbins used per day:</label>
-                    <input type="number" name="dustbin_num" id="dustbin_num" class="form-control">
+                    <label for="normal_dustbins">No. of Normal dustbins used per day:</label>
+                    <input type="number" name="normal_dustbins" id="normal_dustbins" class="form-control" aria-describedby="normal">
+                    <small class="text-muted form-text" id="normal">Dimensions: 0x0</small>
                 </div>
 
                 <div class="form-group col">
-                    <label for="dustbin_size">What is the size of your dustbin?</label>
-                    <select name="dustbin_size" id="dustbin_size" class="form-control" aria-describedby="sizeHelp">
-                        <option value="normal">Normal</option>
-                        <option value="small">Small</option>
-                        <option value="normalsmall">One Normal One Small</option>
-                    </select>
-                    <small class="form-text text-muted" id="sizeHelp">
-                        Small is the really small handheld sort of dustbin
-                    </small>
+                    <label for="small_dustbins">No. of Small dustbins used per day:</label>
+                    <input type="number" name="small_dustbins" id="small_dustbins" class="form-control" aria-describedby="small">
+                    <small class="text-muted form-text" id="small">Dimensions: 0x0</small>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="percentBio">What is the approximate percentage of Biodegradable/Recyclable waste?</label>
+                <label for="percentBio">What is the approximate percentage of Biodegradable waste?</label>
                 <p class="percentage">50</p>
                 <input type="range" name="percentBio" id="percentBio" class="slider form-control-range" min="0" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="percentRecycle">What is the approximate percentage of Recyclable waste?</label>
+                <p class="percentage2">50</p>
+                <input type="range" name="percentRecycle" id="percentRecycle" class="slider form-control-range" min="0" max="100">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -62,12 +63,20 @@
 
     <script src="bootstrap.min.js"></script>
     <script>
-        $('input[type=range]').mousemove(function(){
+        $('input[type=range]#percentBio').mousemove(function(){
             $('.percentage').html(this.value)
         })
         //For Touch Devices
-        $('input[type=range]').click(function(){
+        $('input[type=range]#percentBio').click(function(){
             $('.percentage').html(this.value)
+        })
+
+        $('input[type=range]#percentRecycle').mousemove(function(){
+            $('.percentage2').html(this.value)
+        })
+        //For Touch Devices
+        $('input[type=range]#percentRecycle').click(function(){
+            $('.percentage2').html(this.value)
         })
     </script>
 </body>
