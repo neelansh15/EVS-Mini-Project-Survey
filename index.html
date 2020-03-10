@@ -43,15 +43,21 @@
             </div>
 
             <div class="form-group">
-                <label for="percentBio">What is the approximate percentage of Biodegradable waste?</label>
+                <label for="percentPaper">What is the approximate percentage of Paper waste?</label>
                 <p class="percentage">50</p>
-                <input type="range" name="percentBio" id="percentBio" class="slider form-control-range" min="0" max="100">
+                <input type="range" name="percentPaper" id="percentPaper" class="slider form-control-range" min="0" max="100">
             </div>
 
             <div class="form-group">
-                <label for="percentRecycle">What is the approximate percentage of Recyclable waste?</label>
+                <label for="percentPlastic">What is the approximate percentage of Plastic waste?</label>
                 <p class="percentage2">50</p>
-                <input type="range" name="percentRecycle" id="percentRecycle" class="slider form-control-range" min="0" max="100">
+                <input type="range" name="percentPlastic" id="percentPlastic" class="slider form-control-range" min="0" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="percentKitchen">What is the approximate percentage of Kitchen waste?</label>
+                <p class="percentage3">50</p>
+                <input type="range" name="percentKitchen" id="percentKitchen" class="slider form-control-range" min="0" max="100">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -65,20 +71,28 @@
 
     <script src="bootstrap.min.js"></script>
     <script>
-        $('input[type=range]#percentBio').mousemove(function(){
+        $('input[type=range]#percentPaper').mousemove(function(){
             $('.percentage').html(this.value)
         })
         //For Touch Devices
-        $('input[type=range]#percentBio').click(function(){
+        $('input[type=range]#percentPaper').click(function(){
             $('.percentage').html(this.value)
         })
 
-        $('input[type=range]#percentRecycle').mousemove(function(){
+        $('input[type=range]#percentPlastic').mousemove(function(){
             $('.percentage2').html(this.value)
         })
         //For Touch Devices
-        $('input[type=range]#percentRecycle').click(function(){
+        $('input[type=range]#percentPlastic').click(function(){
             $('.percentage2').html(this.value)
+        })
+
+        $('input[type=range]#percentKitchen').mousemove(function(){
+            $('.percentage3').html(this.value)
+        })
+        //For Touch Devices
+        $('input[type=range]#percentKitchen').click(function(){
+            $('.percentage3').html(this.value)
         })
     </script>
 </body>
