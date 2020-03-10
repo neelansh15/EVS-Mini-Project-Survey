@@ -16,6 +16,7 @@
     color: white;
 }
 .message{
+    display: none;
     color: rgb(197, 63, 63);
     padding: 10px 0px;
 }
