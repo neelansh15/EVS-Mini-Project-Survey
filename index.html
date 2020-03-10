@@ -60,6 +60,9 @@
                 <input type="range" name="percentKitchen" id="percentKitchen" class="slider form-control-range" min="0" max="100">
             </div>
 
+            <br>
+            <div class="message"></div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <br>
@@ -93,6 +96,23 @@
         //For Touch Devices
         $('input[type=range]#percentKitchen').click(function(){
             $('.percentage3').html(this.value)
+        })
+
+        //Check if total percentage is near 100 or greater
+        $('input[type=range]').mousemove(function(){
+            var p1 = parseInt($('.percentage').html())
+            var p2 = parseInt($('.percentage2').html())
+            var p3 = parseInt($('.percentage3').html())
+
+            if((p1 + p2 + p3) > 100){
+                $('.message').html("The combined contribution of the above three types of waste should not exceed 100.")
+                $('.btn').attr("disabled", "True")
+            }
+            else{
+                $('.message').html(" ")
+                $('.btn').removeAttr("disabled")
+            }
+
         })
     </script>
 </body>
