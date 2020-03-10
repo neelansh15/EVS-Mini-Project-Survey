@@ -100,9 +100,9 @@
 
         //Check if total percentage is near 100 or greater
         $('input[type=range]').mousemove(function(){
-            var p1 = parseInt($('.percentage').html())
-            var p2 = parseInt($('.percentage2').html())
-            var p3 = parseInt($('.percentage3').html())
+            var p1 = parseInt($('input[type=range]#percentPaper').val())
+            var p2 = parseInt($('input[type=range]#percentPlastic').val())
+            var p3 = parseInt($('input[type=range]#percentKitchen').val())
 
             if((p1 + p2 + p3) > 100){
                 $('.btn').attr("disabled", "True")
