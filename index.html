@@ -105,14 +105,13 @@
             var p3 = parseInt($('.percentage3').html())
 
             if((p1 + p2 + p3) > 100){
-                $('.message').html("The combined contribution of the above three types of waste should not exceed 100.")
+                $('.message').html("The combined contribution of the above three types of waste should not exceed 100%.")
                 $('.btn').attr("disabled", "True")
             }
             else{
                 $('.message').html(" ")
                 $('.btn').removeAttr("disabled")
             }
-
         })
     </script>
 </body>
