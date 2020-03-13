@@ -74,6 +74,7 @@
 
     <script src="bootstrap.min.js"></script>
     <script>
+        $('.btn').attr("disabled", "True")
 
         $('input[type=range]#percentPaper').on('input change', function(){
             $('.percentage').html(this.value)
