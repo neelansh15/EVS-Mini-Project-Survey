@@ -107,7 +107,7 @@
         })
 
         //Check if total percentage is near 100 or greater
-        $('input[type=range]').mousemove(function(){
+        $('input[type=range]').on('input change', function(){
             var p1 = parseInt($('input[type=range]#percentPaper').val())
             var p2 = parseInt($('input[type=range]#percentPlastic').val())
             var p3 = parseInt($('input[type=range]#percentKitchen').val())
