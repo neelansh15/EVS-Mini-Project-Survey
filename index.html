@@ -14,30 +14,30 @@
     
     <div class="container" style="width: 60%">
         <p>Please fill in the form below. Use estimated/average amounts where needed</p>
-        <form action="" method="POST">
+        <form action="submit.php" method="POST">
 
             <div class="form-row">
                 <div class="form-group col">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" class="form-control">
+                    <input type="text" name="name" id="name" class="form-control" required>
                 </div>
 
                 <div class="form-group col">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="form-control">
+                    <input type="email" name="email" id="email" class="form-control" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col">
                     <label for="normal_dustbins">No. of Normal dustbins used per day:</label>
-                    <input type="number" name="normal_dustbins" id="normal_dustbins" class="form-control" aria-describedby="normal">
+                    <input type="number" name="normal_dustbins" id="normal_dustbins" class="form-control" aria-describedby="normal" required>
                     <small class="text-muted form-text" id="normal">Volume: 12L</small>
                 </div>
 
                 <div class="form-group col">
                     <label for="small_dustbins">No. of Small dustbins used per day:</label>
-                    <input type="number" name="small_dustbins" id="small_dustbins" class="form-control" aria-describedby="small">
+                    <input type="number" name="small_dustbins" id="small_dustbins" class="form-control" aria-describedby="small" required>
                     <small class="text-muted form-text" id="small">Volume: 6.5L</small>
                 </div>
             </div>
@@ -45,19 +45,19 @@
             <div class="form-group">
                 <label for="percentPaper">What is the approximate percentage of Paper waste?</label>
                 <p class="percentage">50</p>
-                <input type="range" name="percentPaper" id="percentPaper" class="slider form-control-range" min="0" max="100">
+                <input type="range" name="percentPaper" id="percentPaper" class="slider form-control-range" min="0" max="100" required>
             </div>
 
             <div class="form-group">
                 <label for="percentPlastic">What is the approximate percentage of Plastic waste?</label>
                 <p class="percentage2">50</p>
-                <input type="range" name="percentPlastic" id="percentPlastic" class="slider form-control-range" min="0" max="100">
+                <input type="range" name="percentPlastic" id="percentPlastic" class="slider form-control-range" min="0" max="100" required>
             </div>
 
             <div class="form-group">
                 <label for="percentKitchen">What is the approximate percentage of Kitchen waste?</label>
                 <p class="percentage3">50</p>
-                <input type="range" name="percentKitchen" id="percentKitchen" class="slider form-control-range" min="0" max="100">
+                <input type="range" name="percentKitchen" id="percentKitchen" class="slider form-control-range" min="0" max="100" required>
             </div>
 
             <br>
@@ -74,33 +74,14 @@
 
     <script src="bootstrap.min.js"></script>
     <script>
-        // $('input[type=range]#percentPaper').mousemove(function(){
-        //     $('.percentage').html(this.value)
-        // })
-        //For Touch Devices
+
         $('input[type=range]#percentPaper').on('input change', function(){
             $('.percentage').html(this.value)
         })
 
-
-        // $('input[type=range]#percentPlastic').mousemove(function(){
-        //     $('.percentage2').html(this.value)
-        // })
-        // //For Touch Devices
-        // $('input[type=range]#percentPlastic').click(function(){
-        //     $('.percentage2').html(this.value)
-        // })
         $('input[type=range]#percentPlastic').on('input change', function(){
             $('.percentage2').html(this.value)
         })
-
-        // $('input[type=range]#percentKitchen').mousemove(function(){
-        //     $('.percentage3').html(this.value)
-        // })
-        // //For Touch Devices
-        // $('input[type=range]#percentKitchen').click(function(){
-        //     $('.percentage3').html(this.value)
-        // })
 
         $('input[type=range]#percentKitchen').on('input change', function(){
             $('.percentage3').html(this.value)
@@ -121,6 +102,7 @@
                 $('.message').fadeOut()
             }
         })
+
     </script>
 </body>
 </html>
