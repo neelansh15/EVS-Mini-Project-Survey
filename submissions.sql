@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2020 at 05:18 PM
+-- Generation Time: Mar 14, 2020 at 08:23 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `evs`
+-- Database: `neelan40_evs`
 --
 
 -- --------------------------------------------------------
@@ -45,7 +45,10 @@ CREATE TABLE `submissions` (
 
 INSERT INTO `submissions` (`id`, `name`, `email`, `normal_dustbins`, `small_dustbins`, `paper`, `plastic`, `kitchen`) VALUES
 (1, 'Neelansh', 'neelansh.m@somaiya.edu', 1, 1, 10, 10, 80),
-(2, 'Mr.Mayo', 'mayo@mayonnaise.org', 5, 1, 10, 3, 87);
+(2, 'Mr.Mayo', 'mayo@mayonnaise.org', 5, 1, 10, 3, 87),
+(3, 'Doge', 'dend@doomed.com', 2, 1, 12, 39, 41),
+(4, 'Alkibiades', 'None', 2, 8, 11, 76, 6),
+(5, 'Karen', 'None', 1, 2, 43, 17, 35);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +68,7 @@ ALTER TABLE `submissions`
 -- AUTO_INCREMENT for table `submissions`
 --
 ALTER TABLE `submissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
