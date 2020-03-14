@@ -1,6 +1,7 @@
 <?php
 
-require_once(__DIR__.'\..\config.php');
+// require_once(__DIR__.'\..\config.php'); Works locally but gives an error on the server
+require_once('config.php');
 
 $conn = new mysqli($host, $username, $password, $db);
 
