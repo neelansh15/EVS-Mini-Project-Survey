@@ -19,6 +19,11 @@ if(isset($_POST["name"])){
     $plastic = $_POST["percentPlastic"];
     $kitchen = $_POST["percentKitchen"];
 
+    //Make email optional
+    if($email == "" || $email == null){
+        $email = "None";
+    }
+
     $query = "INSERT INTO submissions (name, email, normal_dustbins, small_dustbins, paper, plastic, kitchen)
     VALUES (
         '$name',
@@ -49,6 +54,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/plasticine/100/000000/nature.png" type="image/png">
     <title>EVS Mini-Project Survey</title>
 </head>
 <body>
@@ -71,7 +77,7 @@ else{
     </h1>
     </div>
 
-    
+
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
