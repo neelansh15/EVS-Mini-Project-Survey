@@ -61,7 +61,7 @@ $avgSmall = 0;
 
 
         <br>
-        <h2 class="display-4">Submissions: <span class="badge badge-dark">
+        <h2 class="display-4 mb-2">Submissions: <span class="badge badge-dark">
             <?php echo $numRows ?>
         </span></h2>
         <table class="table table-striped table-inverse table-responsive">
@@ -125,7 +125,7 @@ $avgSmall = 0;
                         <div class="col-sm-8">
                             <div class="card-body">
                                 <h5 class="card-title">Average Paper Waste</h5>
-                                <p class="card-text"><?php echo $avgPaper ?></p>
+                                <p class="card-text"><?php echo $avgPaper; ?></p>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@ $avgSmall = 0;
                         <div class="col-sm-8">
                             <div class="card-body">
                                 <h5 class="card-title">Average Plastic Waste</h5>
-                                <p class="card-text"><?php echo $avgPlastic ?></p>
+                                <p class="card-text"><?php echo $avgPlastic; ?></p>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ $avgSmall = 0;
                         <div class="col-sm-8">
                             <div class="card-body">
                                 <h5 class="card-title">Average Kitchen Waste</h5>
-                                <p class="card-text"><?php echo $avgKitchen ?></p>
+                                <p class="card-text"><?php echo $avgKitchen; ?></p>
                             </div>
                         </div>
                     </div>
@@ -173,10 +173,24 @@ $avgSmall = 0;
         </div>
 
         <!--Computation-->
+        <?php
+
         
+        $totalTonnes = ($avgNormal*5.77 + $avgSmall*3.13)/1000; //In tonnes
+        
+        $energyPaper = ($avgPaper / 100) * $totalTonnes * 4100; //In kWh
+        $energyPlastic = ($avgPlastic / 100) * $totalTonnes * 5774; //In kWh
+        $energyKitchen = ($avgKitchen / 100) * $totalTonnes * 110 * 2; //In kWh
+
+        ?>
+
 
         <div class="jumbotron">
-            <h1>Total Energy saved: <?php echo $avgSmall ?></h1> <!--Test-->
+            <p class="lead">Average energy that could have been saved in each household had it been recycled/reused correctly</p>
+            <h3>Energy from Paper: <?php echo $energyPaper; ?> kWh</h3> 
+            <h3>Energy from Plastic: <?php echo $energyPlastic ?> kWh</h3> 
+            <h3>Energy from Kitchen waste: <?php echo $energyKitchen ?> kWh</h3>
+            <h1 class="display-4">Total: <?php echo $energyPaper + $energyPlastic + $energyKitchen; ?> kWh</h1> 
         </div>
 
     </div>
